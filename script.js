@@ -28,12 +28,9 @@ const observer = new IntersectionObserver((entries) => {
       observer.unobserve(e.target);
     }
   });
-}, { threshold: 0.15 });
-document.querySelectorAll('[data-animate]').forEach((el) => observer.observe(el));
+}, { threshold: 0.2 });
 
-document.querySelectorAll('.faq-q').forEach((q) => q.addEventListener('click', () => {
-  q.closest('.faq-item').classList.toggle('open');
-}));
+document.querySelectorAll('[data-animate]').forEach((el) => observer.observe(el));
 
 const cookieBanner = document.querySelector('.cookie-banner');
 const cookieBtn = document.querySelector('#accept-cookies');
@@ -43,6 +40,43 @@ if (cookieBtn) cookieBtn.addEventListener('click', () => {
   cookieBanner.style.display = 'none';
 });
 
+const chatFab = document.querySelector('.chat-fab');
+const chatWin = document.querySelector('.chat-window');
+const chatInput = document.querySelector('#chat-input');
+const chatSend = document.querySelector('#chat-send');
+const chatBody = document.querySelector('.chat-body');
+const faq = {
+  visa: 'We provide complete China Visa Services, including document review and embassy guidance.',
+  import: 'Our Import from China service covers sourcing, supplier verification, shipping, and customs support.',
+  canton: 'For Canton Fair Assistance, we help with registration, visa, hotel booking, translation, and sourcing planning.'
+};
+
+if (chatFab && chatWin) {
+  chatFab.addEventListener('click', () => {
+    chatWin.style.display = chatWin.style.display === 'block' ? 'none' : 'block';
+  });
+}
+
+function appendMsg(text, type = 'bot') {
+  if (!chatBody) return;
+  const d = document.createElement('div');
+  d.className = `chat-msg ${type}`;
+  d.textContent = text;
+  chatBody.appendChild(d);
+  chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+if (chatSend && chatInput) {
+  chatSend.addEventListener('click', () => {
+    const text = chatInput.value.trim();
+    if (!text) return;
+    appendMsg(text, 'user');
+    const key = Object.keys(faq).find((k) => text.toLowerCase().includes(k));
+    appendMsg(key ? faq[key] : 'Thanks for your message. Our team will contact you soon for tailored support.');
+    chatInput.value = '';
+  });
+}
+
 const products = [
   { id: 'clothes', name: 'Premium Clothes Bundle', price: 120 },
   { id: 'electronics', name: 'Electronics Pack', price: 350 },
@@ -50,12 +84,17 @@ const products = [
   { id: 'wholesale', name: 'Wholesale Goods Set', price: 500 }
 ];
 const cartKey = 'che_cart';
-const getCart = () => JSON.parse(localStorage.getItem(cartKey) || '[]');
-const setCart = (c) => localStorage.setItem(cartKey, JSON.stringify(c));
 
+function getCart() {
+  return JSON.parse(localStorage.getItem(cartKey) || '[]');
+}
+function setCart(c) {
+  localStorage.setItem(cartKey, JSON.stringify(c));
+}
 function renderCartCount() {
+  const countEl = document.querySelectorAll('.cart-count');
   const count = getCart().reduce((t, i) => t + i.qty, 0);
-  document.querySelectorAll('.cart-count').forEach((el) => el.textContent = count);
+  countEl.forEach((el) => { el.textContent = count; });
 }
 
 function addToCart(id) {
@@ -73,7 +112,7 @@ function addToCart(id) {
 document.querySelectorAll('[data-add-cart]').forEach((btn) => btn.addEventListener('click', () => {
   addToCart(btn.dataset.addCart);
   btn.textContent = 'Added ✓';
-  setTimeout(() => btn.textContent = 'Add to Cart', 900);
+  setTimeout(() => { btn.textContent = 'Add to Cart'; }, 900);
 }));
 
 const checkoutList = document.querySelector('#checkout-items');
@@ -92,15 +131,10 @@ if (checkoutList) {
   if (t) t.textContent = `$${total}`;
 }
 
-const paymentForm = document.querySelector('#payment-form');
-if (paymentForm) {
-  paymentForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const email = document.querySelector('#receipt-email')?.value || 'customer email';
-    const receipt = document.querySelector('#receipt-message');
-    if (receipt) receipt.textContent = `Payment successful. A receipt has been sent to ${email}.`;
-    localStorage.removeItem(cartKey);
-    renderCartCount();
+const tipBtn = document.querySelector('#tip-btn');
+if (tipBtn) {
+  tipBtn.addEventListener('click', () => {
+    alert('Thank you for your support! Payment integration placeholder connected.');
   });
 }
 
