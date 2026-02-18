@@ -26,16 +26,15 @@ ul { list-style: none; }
 .nav-wrap { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
 .brand { display: flex; gap: 10px; align-items: center; }
 
+/* ===== LOGO FIX ===== */
 .logo {
-    width: auto;       /* Let image decide width */
-    height: 45px;      /* Normal navbar logo height */
+    height: 45px;              /* adjust this value to make logo smaller/larger */
     display: flex;
     align-items: center;
 }
-
 .logo img {
-    height: 2%;      /* Fill the div height */
-    width: auto;       /* Maintain aspect ratio */
+    height: 100%;              /* fills the container height */
+    width: auto;               /* maintain aspect ratio */
     object-fit: contain;
     display: block;
 }
