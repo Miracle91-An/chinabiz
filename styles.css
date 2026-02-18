@@ -25,7 +25,21 @@ ul { list-style: none; }
 .site-header { position: sticky; top: 0; z-index: 1000; background: rgba(255,255,255,.96); backdrop-filter: blur(8px); border-bottom: 1px solid #eee; }
 .nav-wrap { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
 .brand { display: flex; gap: 10px; align-items: center; }
-.logo { width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(145deg, var(--primary), #8d0000); display: grid; place-items: center; color: #fff; font-weight: 700; }
+
+.logo {
+    width: auto;       /* Let image decide width */
+    height: 45px;      /* Normal navbar logo height */
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 100%;      /* Fill the div height */
+    width: auto;       /* Maintain aspect ratio */
+    object-fit: contain;
+    display: block;
+}
+
 .brand h1 { font-size: 1.1rem; color: var(--secondary); }
 .nav-links { display: flex; gap: 18px; align-items: center; }
 .nav-links a { font-weight: 500; padding: 6px 10px; border-radius: 8px; transition: var(--transition); }
