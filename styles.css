@@ -34,7 +34,7 @@ ul { list-style: none; }
 }
 
 .logo img {
-    height: 100%;      /* Fill the div height */
+    height: 2%;      /* Fill the div height */
     width: auto;       /* Maintain aspect ratio */
     object-fit: contain;
     display: block;
