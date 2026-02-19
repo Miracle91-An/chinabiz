@@ -3,15 +3,142 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="About China Hub Express.">
+  <meta name="description" content="About China Hub Express – your trusted partner for China business, visa, travel, and trade.">
   <title>About | China Hub Express</title>
+  <!-- Font Awesome for icons (optional, but nice) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Additional custom styles for about page */
+    .founder-card {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      background: var(--muted);
+      border-radius: var(--radius);
+      padding: 30px;
+      margin: 40px 0;
+      flex-wrap: wrap;
+    }
+    .founder-img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: var(--shadow);
+      border: 4px solid var(--accent);
+    }
+    .founder-info {
+      flex: 1;
+      min-width: 260px;
+    }
+    .founder-info h3 {
+      color: var(--secondary);
+      font-size: 1.8rem;
+      margin-bottom: 5px;
+    }
+    .founder-info .founder-title {
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .btn-outline-sm {
+      padding: 6px 16px;
+      font-size: 0.9rem;
+      border: 2px solid var(--secondary);
+      border-radius: 40px;
+      color: var(--secondary);
+      display: inline-block;
+      margin-top: 10px;
+      transition: var(--transition);
+    }
+    .btn-outline-sm:hover {
+      background: var(--secondary);
+      color: #fff;
+    }
+
+    /* Team gallery item with overlay */
+    .team-gallery-item {
+      min-width: 200px;
+      width: 200px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+    .team-gallery-item img {
+      height: 220px;
+      object-fit: cover;
+    }
+    .team-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.8));
+      color: #fff;
+      padding: 15px 10px 10px;
+      text-align: center;
+    }
+    .team-info strong {
+      display: block;
+      font-size: 1.1rem;
+    }
+    .team-info span {
+      font-size: 0.85rem;
+      opacity: 0.9;
+    }
+
+    /* Office & partner gallery items (no overlay, just image) */
+    .office-gallery-item, .partner-gallery-item {
+      min-width: 280px;
+      height: 180px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .office-gallery-item img, .partner-gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Why choose us icons */
+    .usp-icon {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .section-subtitle a {
+      color: var(--secondary);
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    .cta-banner {
+      background: linear-gradient(130deg, var(--secondary), #013d7f);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 40px 30px;
+      text-align: center;
+      margin: 50px 0;
+    }
+    .cta-banner h3 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+    .cta-banner .btn {
+      background: var(--accent);
+      color: #000;
+      font-weight: 700;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="index.html">
-        <!-- Logo image replaces "CH" text -->
         <div class="logo">
           <img src="chinahubexpresslogo.png" alt="China Hub Express Logo">
         </div>
@@ -29,13 +156,207 @@
     </div>
   </header>
 
-  <main class="section container">
-    <h1 class="section-title">About China Hub Express</h1>
-    <p class="section-subtitle">We bridge global clients to China opportunities in travel, trade and business growth.</p>
-    <div class="testimonials">
-      <div class="quote">“Trusted partner for China entry strategy.”<br><strong>— Corporate Client</strong></div>
-      <div class="quote">“Fast communication and transparent service.”<br><strong>— Importer</strong></div>
-      <div class="quote">“Excellent fair support and translation team.”<br><strong>— Buyer</strong></div>
+  <main>
+    <!-- Hero section (small) -->
+    <section class="service-hero" style="background-image:url('https://images.unsplash.com/photo-1521292270410-a8c4d716d518?auto=format&fit=crop&w=1600&q=80')">
+      <div class="container">
+        <h1>About China Hub Express</h1>
+        <p>Your bridge to China – business, travel, and trade simplified.</p>
+      </div>
+    </section>
+
+    <div class="section container">
+      <!-- Brand Introduction -->
+      <section>
+        <h2 class="section-title">Who We Are</h2>
+        <p class="section-subtitle"><strong>China Hub Express</strong> is a premier China‑focused agency dedicated to helping individuals and businesses navigate the complexities of the Chinese market. We specialise in:</p>
+        <div class="cards-grid" style="margin-bottom: 30px;">
+          <div class="card"><i class="fas fa-passport usp-icon"></i><h3>Visa Assistance</h3><p>Tourist, business, and student visas – fast, reliable, and complete guidance.</p></div>
+          <div class="card"><i class="fas fa-building usp-icon"></i><h3>Business Registration</h3><p>Company incorporation, legal support, and office setup in China.</p></div>
+          <div class="card"><i class="fas fa-car usp-icon"></i><h3>Auto Dealership</h3><p>Source and import vehicles directly from Chinese manufacturers.</p></div>
+          <div class="card"><i class="fas fa-ship usp-icon"></i><h3>Import/Export</h3><p>End‑to‑end logistics, supplier connection, and Canton Fair assistance.</p></div>
+        </div>
+        <p><strong>Who we serve:</strong> Students, entrepreneurs, traders, corporate clients, and anyone looking to explore opportunities in China.</p>
+      </section>
+
+      <!-- Our Story (Origin) -->
+      <section style="margin: 60px 0; background: var(--muted); padding: 30px; border-radius: var(--radius);">
+        <h2 class="section-title">Our Story</h2>
+        <p>Founded by <strong>Herbert Hawkson Nyannor</strong>, China Hub Express was born from years of experience in international trade and healthcare. After successfully establishing Americare Health LLC in the US, Herbert saw the immense potential in connecting African and Western businesses with Chinese suppliers, manufacturers, and educational institutions. What started as a one‑man consulting effort quickly grew into a full‑service agency with a passionate team. Today, we’ve helped hundreds of clients – from first‑time travelers to multinational companies – achieve their goals in China.</p>
+      </section>
+
+      <!-- Mission, Vision, Core Values, USP -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin: 50px 0;">
+        <div class="card">
+          <i class="fas fa-bullseye usp-icon"></i>
+          <h3>Our Mission</h3>
+          <p>To demystify China for global clients by providing transparent, efficient, and personalised services that turn complex processes into seamless experiences.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-eye usp-icon"></i>
+          <h3>Our Vision</h3>
+          <p>To be the most trusted China gateway for entrepreneurs, students, and businesses worldwide, fostering cross‑cultural economic growth.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-heart usp-icon"></i>
+          <h3>Core Values</h3>
+          <p>Integrity • Speed • Cultural Insight • Client‑First • Innovation</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-gem usp-icon"></i>
+          <h3>What Makes Us Different</h3>
+          <p>We combine local Chinese knowledge with international business standards. Our team is on the ground in both China and Ghana, ensuring you get accurate, up‑to‑date information and hands‑on support.</p>
+        </div>
+      </div>
+
+      <!-- Services Snapshot (quick list) -->
+      <section style="margin: 40px 0;">
+        <h2 class="section-title">Services at a Glance</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
+          <span class="price-badge"><i class="fas fa-check-circle"></i> Visa Processing</span>
+          <span class="price-badge"><i class="fas fa-check-circle"></i> Business Registration</span>
+          <span class="price-badge"><i class="fas fa-check-circle"></i> Auto Dealership</span>
+          <span class="price-badge"><i class="fas fa-check-circle"></i> Import/Export</span>
+          <span class="price-badge"><i class="fas fa-check-circle"></i> Canton Fair Tours</span>
+          <span class="price-badge"><i class="fas fa-check-circle"></i> Translation & Support</span>
+          <span class="price-badge"><i class="fas fa-check-circle"></i> Supplier Sourcing</span>
+          <span class="price-badge"><i class="fas fa-check-circle"></i> Study in China</span>
+        </div>
+      </section>
+
+      <!-- Founder Section -->
+      <section class="founder-card">
+        <img class="founder-img" src="herbert-hawkson-nyannor.jpg" alt="Herbert Hawkson Nyannor, Founder">
+        <div class="founder-info">
+          <h3>Herbert Hawkson Nyannor</h3>
+          <div class="founder-title">Founder & CEO, China Hub Express</div>
+          <p>Herbert is a serial entrepreneur with a passion for bridging markets. Besides China Hub Express, he is the founder of <a href="https://americarehealthllc.com" target="_blank" rel="noopener">Americare Health LLC</a>, a US‑based healthcare company. His extensive experience in international business and cross‑cultural negotiation drives our client‑first approach.</p>
+          <a href="https://americarehealthllc.com" target="_blank" class="btn-outline-sm"><i class="fas fa-external-link-alt"></i> Americare Health LLC</a>
+        </div>
+      </section>
+
+      <!-- Team Leaders Gallery (fast gliding) -->
+      <section style="margin: 60px 0;">
+        <h2 class="section-title">Meet Our Leadership Team</h2>
+        <div class="gallery-track">
+          <div class="gallery-inner">
+            <!-- Miracle Aneke -->
+            <div class="team-gallery-item">
+              <img src="miracle-aneke-headshot.jpg" alt="Miracle Aneke">
+              <div class="team-info">
+                <strong>Miracle Aneke</strong>
+                <span>Co‑founder & Computer Engineer</span>
+                <a href="https://miracleaneke.online" target="_blank" style="color: var(--accent);">🌐</a>
+              </div>
+            </div>
+            <!-- Mark Nyannor -->
+            <div class="team-gallery-item">
+              <img src="mark-nyannor.jpg" alt="Mark Nyannor">
+              <div class="team-info">
+                <strong>Mark Nyannor</strong>
+                <span>Administrator</span>
+              </div>
+            </div>
+            <!-- David Nyannor -->
+            <div class="team-gallery-item">
+              <img src="david-nyannor.jpg" alt="David Nyannor">
+              <div class="team-info">
+                <strong>David Nyannor</strong>
+                <span>Operations Manager</span>
+              </div>
+            </div>
+            <!-- Praise Aneke -->
+            <div class="team-gallery-item">
+              <img src="praise-aneke.jpg" alt="Praise Aneke">
+              <div class="team-info">
+                <strong>Praise Aneke</strong>
+                <span>Operational Manager</span>
+              </div>
+            </div>
+            <!-- Duplicate for seamless loop (can be the same images) -->
+            <div class="team-gallery-item">
+              <img src="miracle-aneke-headshot.jpg" alt="Miracle Aneke">
+              <div class="team-info">
+                <strong>Miracle Aneke</strong>
+                <span>Co‑founder & Computer Engineer</span>
+              </div>
+            </div>
+            <div class="team-gallery-item">
+              <img src="mark-nyannor.jpg" alt="Mark Nyannor">
+              <div class="team-info">
+                <strong>Mark Nyannor</strong>
+                <span>Administrator</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Office Photos Gallery -->
+      <section style="margin: 60px 0;">
+        <h2 class="section-title">Our Office</h2>
+        <div class="gallery-track">
+          <div class="gallery-inner">
+            <div class="office-gallery-item"><img src="images/office1.jpg" alt="Office front"></div>
+            <div class="office-gallery-item"><img src="images/office2.jpg" alt="Reception"></div>
+            <div class="office-gallery-item"><img src="images/office3.jpg" alt="Meeting room"></div>
+            <div class="office-gallery-item"><img src="images/office4.jpg" alt="Team workspace"></div>
+            <!-- Duplicates for seamless loop -->
+            <div class="office-gallery-item"><img src="images/office1.jpg" alt="Office front"></div>
+            <div class="office-gallery-item"><img src="images/office2.jpg" alt="Reception"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Partners Logos Gallery -->
+      <section style="margin: 60px 0;">
+        <h2 class="section-title">Our Trusted Partners</h2>
+        <div class="gallery-track">
+          <div class="gallery-inner">
+            <div class="partner-gallery-item"><img src="images/partner-logo1.png" alt="Partner 1"></div>
+            <div class="partner-gallery-item"><img src="images/partner-logo2.png" alt="Partner 2"></div>
+            <div class="partner-gallery-item"><img src="images/partner-logo3.png" alt="Partner 3"></div>
+            <div class="partner-gallery-item"><img src="images/partner-logo4.png" alt="Partner 4"></div>
+            <div class="partner-gallery-item"><img src="images/partner-logo5.png" alt="Partner 5"></div>
+            <!-- Duplicates -->
+            <div class="partner-gallery-item"><img src="images/partner-logo1.png" alt="Partner 1"></div>
+            <div class="partner-gallery-item"><img src="images/partner-logo2.png" alt="Partner 2"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us + Promos + CTA -->
+      <section style="margin: 60px 0;">
+        <h2 class="section-title">Why Choose China Hub Express?</h2>
+        <div class="cards-grid">
+          <div class="card">
+            <i class="fas fa-bolt usp-icon"></i>
+            <h3>Fast & Reliable</h3>
+            <p>Most visas processed within 5‑7 working days. Emergency options available.</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-handshake usp-icon"></i>
+            <h3>On‑the‑Ground Support</h3>
+            <p>Our team in China assists with invitations, translations, and factory visits.</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-gift usp-icon"></i>
+            <h3>Seasonal Promos</h3>
+            <p>Bundle services and save! Ask about our Canton Fair + visa packages.</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-globe usp-icon"></i>
+            <h3>Global Network</h3>
+            <p>Connected with verified suppliers, schools, and government agencies.</p>
+          </div>
+        </div>
+        <!-- Promo Banner -->
+        <div class="cta-banner">
+          <h3>Ready to start your China journey?</h3>
+          <p>Book a free consultation today and receive a 40% discount on your first service bundle.</p>
+          <a href="contact.html" class="btn btn-accent" style="font-size: 1.2rem; padding: 12px 30px;">Get in Touch</a>
+        </div>
+      </section>
     </div>
   </main>
 
@@ -76,9 +397,14 @@
         <h4>Contact</h4>
         <ul>
           <li>Email: <a href="mailto:info@chinahubexpress.com">info@chinahubexpress.com</a></li>
-          <li>WhatsApp: <a href="https://wa.me/1234567890">Chat now</a></li>
+          <li>WhatsApp: <a href="https://wa.me/233500694540">Chat now</a></li>
           <li><a href="contact.html">Map & Form</a></li>
-          <li>Social: <a href="#" aria-label="Facebook">ⓕ</a> <a href="#" aria-label="Instagram">ⓘ</a> <a href="#" aria-label="LinkedIn">ⓛ</a> <a href="#" aria-label="Twitter">ⓧ</a></li>
+          <li>Social: 
+            <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </li>
         </ul>
       </div>
     </div>
@@ -88,7 +414,11 @@
     </div>
   </footer>
 
-  <a class="whatsapp-fab" href="https://wa.me/1234567890" target="_blank">✆</a>
+  <!-- Floating WhatsApp Button -->
+  <a class="whatsapp-fab" href="https://wa.me/233500694540" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
   <script src="script.js"></script>
 </body>
 </html>
