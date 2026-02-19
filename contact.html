@@ -3,9 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contact China Hub Express for China travel, import, and business support.">
+  <meta name="description" content="Contact China Hub Express for China travel, import, and business support. Schedule a consultation, request a travel package, or find our office in Ashaiman Newtown Junction.">
   <title>Contact | China Hub Express</title>
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Additional small tweaks for map and contact card */
+    .map-iframe {
+      width: 100%;
+      height: 180px;
+      border: 0;
+      border-radius: 8px;
+    }
+    .contact-info i {
+      margin-right: 8px;
+      color: var(--primary);
+    }
+    .social-links a {
+      display: inline-block;
+      margin-right: 12px;
+      font-size: 1.4rem;
+      color: var(--secondary);
+      transition: var(--transition);
+    }
+    .social-links a:hover {
+      color: var(--primary);
+      transform: translateY(-2px);
+    }
+    .business-hours p {
+      margin-bottom: 4px;
+    }
+    .reply-badge {
+      background: var(--accent);
+      color: #000;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 30px;
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -36,31 +74,102 @@
   </section>
 
   <main class="section container">
+    <!-- Travel Package Request Form + Consultation -->
     <div class="contact-pro">
-      <h2 class="section-title" style="margin-bottom:6px">Send Us a Message</h2>
-      <p class="section-subtitle">We reply quickly with tailored support plans.</p>
-      <div class="form-grid">
-        <input placeholder="Full Name" aria-label="Name">
-        <input type="email" placeholder="Business Email" aria-label="Email">
-        <input placeholder="Phone / WhatsApp" aria-label="Phone">
-        <select aria-label="Service">
-          <option>Select Service</option>
-          <option>China Visa Services</option>
-          <option>Import from China</option>
-          <option>Canton Fair Assistance</option>
-          <option>Business Registration in China</option>
-        </select>
+      <h2 class="section-title" style="margin-bottom:6px">📦 Travel Package Request & Consultation</h2>
+      <p class="section-subtitle">Tell us your travel plans – we’ll craft the perfect China package.</p>
+      
+      <!-- 24h reply badge -->
+      <div class="reply-badge">
+        <i class="fas fa-clock"></i> We reply within 24 hours
       </div>
-      <textarea placeholder="Tell us your needs in detail"></textarea>
-      <p style="margin-top:12px"><button class="btn btn-primary">Send Professional Inquiry</button></p>
+
+      <!-- Schedule consultation with phone number -->
+      <div style="background: #f0f4fa; padding: 12px 16px; border-radius: 12px; margin-bottom: 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 20px;">
+        <div>
+          <i class="fas fa-phone-alt" style="color: var(--primary);"></i>
+          <strong>Schedule a consultation:</strong>
+          <a href="tel:+233500694540" style="color: var(--secondary); font-weight: 600;">+233 500 694 540</a>
+        </div>
+        <div>
+          <i class="fab fa-whatsapp" style="color: #25D366;"></i>
+          <strong>WhatsApp direct:</strong>
+          <a href="https://wa.me/233500694540" target="_blank" style="color: var(--secondary);">Chat now</a>
+        </div>
+      </div>
+
+      <!-- Travel package request form -->
+      <div class="form-grid">
+        <input type="text" placeholder="Full Name" aria-label="Name">
+        <input type="email" placeholder="Email Address" aria-label="Email">
+        <input type="tel" placeholder="Phone / WhatsApp" aria-label="Phone">
+        <input type="date" placeholder="Travel Date" aria-label="Travel date">
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0;">
+        <select aria-label="Package type">
+          <option>Select package type</option>
+          <option>Tourist Visa + Guide</option>
+          <option>Business Visa + Supplier Connect</option>
+          <option>Student Visa + School Search</option>
+          <option>Canton Fair Tour</option>
+          <option>Import/Export Consultation</option>
+          <option>Custom Package</option>
+        </select>
+        <input type="number" placeholder="Number of travelers" min="1" value="1">
+      </div>
+      <textarea placeholder="Additional requests or special requirements (flights, hotels, etc.)" rows="4"></textarea>
+      <p style="margin-top:16px">
+        <button class="btn btn-primary"><i class="fas fa-paper-plane"></i> Submit Travel Request</button>
+      </p>
     </div>
 
-    <section class="section" style="padding-bottom:0">
+    <!-- Contact details cards: Address, Map, Business Hours, Social -->
+    <section class="section" style="padding-top: 20px;">
+      <h2 class="section-title" style="margin-bottom: 24px;">📍 Our Office & Contact Info</h2>
       <div class="cards-grid">
-        <article class="card"><h3>Office Address</h3><p>Shanghai Business District (placeholder)</p></article>
-        <article class="card"><h3>Google Map</h3><p>Embedded map placeholder</p></article>
-        <article class="card"><h3>Direct WhatsApp</h3><p><a href="https://wa.me/1234567890">Click to chat now</a></p></article>
-        <article class="card"><h3>Social Channels</h3><p>Facebook · Instagram · LinkedIn · Twitter</p></article>
+        <!-- Office Address Card -->
+        <article class="card">
+          <h3><i class="fas fa-map-pin"></i> Office Address</h3>
+          <p><strong>Ashaiman Newtown Junction</strong><br>
+          Ashaiman, Greater Accra<br>
+          Ghana</p>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:info@chinahubexpress.com">info@chinahubexpress.com</a><br>
+          <i class="fas fa-phone"></i> <a href="tel:+233500694540">+233 500 694 540</a></p>
+        </article>
+
+        <!-- Google Map Card -->
+        <article class="card">
+          <h3><i class="fas fa-map"></i> Find us on map</h3>
+          <iframe class="map-iframe" 
+            src="https://maps.google.com/maps?q=Ashaiman%20Newtown%20Junction%20Ghana&output=embed"
+            allowfullscreen="" loading="lazy">
+          </iframe>
+          <p style="margin-top: 8px; font-size: 0.9rem;">Ashaiman Newtown Junction (exact location)</p>
+        </article>
+
+        <!-- Business Hours Card -->
+        <article class="card business-hours">
+          <h3><i class="fas fa-clock"></i> Business Hours</h3>
+          <p><strong>Monday – Friday:</strong> 9:00 AM – 6:00 PM</p>
+          <p><strong>Saturday:</strong> 10:00 AM – 2:00 PM</p>
+          <p><strong>Sunday:</strong> Closed</p>
+          <p style="margin-top: 10px;"><i class="fas fa-globe"></i> Online support 24/7 via WhatsApp/email</p>
+        </article>
+
+        <!-- Social Media Card -->
+        <article class="card">
+          <h3><i class="fas fa-share-alt"></i> Connect with us</h3>
+          <div class="social-links">
+            <a href="#" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+            <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://wa.me/233500694540" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+          <p style="margin-top: 12px;">
+            <i class="fas fa-check-circle" style="color: green;"></i> Direct WhatsApp:<br>
+            <a href="https://wa.me/233500694540" target="_blank">+233 500 694 540</a>
+          </p>
+        </article>
       </div>
     </section>
   </main>
@@ -102,9 +211,14 @@
         <h4>Contact</h4>
         <ul>
           <li>Email: <a href="mailto:info@chinahubexpress.com">info@chinahubexpress.com</a></li>
-          <li>WhatsApp: <a href="https://wa.me/1234567890">Chat now</a></li>
+          <li>WhatsApp: <a href="https://wa.me/233500694540">Chat now</a></li>
           <li><a href="contact.html">Map & Form</a></li>
-          <li>Social: <a href="#" aria-label="Facebook">ⓕ</a> <a href="#" aria-label="Instagram">ⓘ</a> <a href="#" aria-label="LinkedIn">ⓛ</a> <a href="#" aria-label="Twitter">ⓧ</a></li>
+          <li>Social: 
+            <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </li>
         </ul>
       </div>
     </div>
@@ -114,7 +228,11 @@
     </div>
   </footer>
 
-  <a class="whatsapp-fab" href="https://wa.me/233500694540" target="_blank">✆</a>
+  <!-- Floating WhatsApp Button -->
+  <a class="whatsapp-fab" href="https://wa.me/233500694540" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
   <script src="script.js"></script>
 </body>
 </html>
