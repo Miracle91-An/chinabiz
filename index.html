@@ -6,6 +6,10 @@
   <meta name="description" content="China Hub Express - premium China Visa Services, Import from China, Canton Fair Assistance, and Business Registration in China." />
   <meta name="keywords" content="China Visa Services,China travel agency, Import from China, Canton Fair Assistance, Business Registration in China, Auto Dealership China, Travel to China" />
   <title>China Hub Express | Gateway to China & Beyond</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <!-- You can also add PNG versions: -->
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"> -->
   <link rel="stylesheet" href="styles.css" />
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -137,8 +141,39 @@
   ]
 }
 </script>
-  
 
+<!-- Additional responsive fixes for mobile -->
+<style>
+  /* Ensure multi-column sections stack nicely on small devices */
+  @media (max-width: 768px) {
+    /* Stats grid */
+    .section > div[style*="grid-template-columns: repeat(4, 1fr)"] {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+    /* How It Works grid */
+    .section > div[style*="grid-template-columns: repeat(3, 1fr)"] {
+      grid-template-columns: 1fr !important;
+    }
+    /* Canton Fair packages grid */
+    .section > div[style*="grid-template-columns: repeat(2, 1fr)"] {
+      grid-template-columns: 1fr !important;
+    }
+    /* Testimonials grid */
+    .testimonials {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+  @media (max-width: 480px) {
+    /* Stats grid becomes 1 column on very small phones */
+    .section > div[style*="grid-template-columns: repeat(4, 1fr)"] {
+      grid-template-columns: 1fr !important;
+    }
+    /* Testimonials become 1 column */
+    .testimonials {
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>
 </head>
 <body>
 <header class="site-header">
@@ -400,7 +435,7 @@
       <img src="chinabusiness.png" alt="Announcement 1">
       <img src="chizflyer.png" alt="Announcement 2">
       <img src="free.jpeg" alt="Announcement 3">
-      <img src="vistorvisa.jpeg" alt="Announcement 4">
+      <img src="visitorvisa.jpeg" alt="Announcement 4">
     </div>
     <p class="modal-footer">Click outside or press ESC to close</p>
   </div>
