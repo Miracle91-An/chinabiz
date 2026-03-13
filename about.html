@@ -1,3 +1,4 @@
+<!-- about.html (enhanced) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +9,67 @@
   <!-- Font Awesome for icons (optional, but nice) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
+  <!-- STRUCTURED DATA (same as index) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://chinahubexpress.com/about.html",
+        "name": "China Hub Express",
+        "url": "https://chinahubexpress.com/",
+        "logo": "https://chinahubexpress.com/chinahubexpresslogo.png",
+        "description": "China-focused travel and business facilitation agency providing visa assistance, business registration in China, Canton Fair processing, bank statement consultation, and international travel advisory services.",
+        "founder": [
+          {
+            "@type": "Person",
+            "name": "Miracle Aneke",
+            "jobTitle": "Founder & CEO",
+            "nationality": "Ghanaian-Nigerian",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Four Smart Brothers Ltd and Magnus Miralex Global Ltd"
+            }
+          },
+          {
+            "@type": "Person",
+            "name": "Herbert Hawkson Nyannor",
+            "jobTitle": "Chief Executive Officer",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Americare Health LLC",
+              "url": "https://americarehealthllc.com"
+            }
+          }
+        ],
+        "areaServed": [
+          { "@type": "Country", "name": "Ghana" },
+          { "@type": "Country", "name": "China" },
+          { "@type": "Country", "name": "United States" }
+        ],
+        "sameAs": [
+          "https://miracleaneke.link",
+          "https://americarehealthllc.com"
+        ]
+      },
+      {
+        "@type": "TravelAgency",
+        "@id": "https://chinahubexpress/#services",
+        "name": "China Hub Express",
+        "url": "https://chinahubexpress.com",
+        "description": "Professional China visa assistance, business registration in China, Canton Fair processing, bank statement advisory, and international travel consultation services.",
+        "serviceType": [
+          "China Visa Assistance",
+          "Business Registration in China",
+          "Canton Fair Processing",
+          "Bank Statement Consultation for Visa",
+          "International Travel Advisory"
+        ]
+      }
+    ]
+  }
+  </script>
   <style>
     /* Additional custom styles for about page */
     .founder-card {
@@ -365,7 +427,8 @@
       <div>
         <h4>China Hub Express</h4>
         <p>Modern travel and tour agency with premium China-focused corporate solutions.</p>
-        <p style="margin-top:8px">Office: Ashaiman Newtown Junction</p>
+        <p style="margin-top:8px">Office: Tema Community 22 Annex</p>
+        <p style="margin-top:6px"><strong>Registered in Virginia, United States</strong></p>
       </div>
       <div>
         <h4>Quick Links</h4>
@@ -374,6 +437,8 @@
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
         </ul>
       </div>
       <div>
@@ -397,7 +462,8 @@
         <h4>Contact</h4>
         <ul>
           <li>Email: <a href="mailto:info@chinahubexpress.com">info@chinahubexpress.com</a></li>
-          <li>WhatsApp: <a href="https://wa.me/233500694540">Chat now</a></li>
+          <li>WhatsApp: <a href="https://wa.me/233500694540">+233 500 694 540</a> / <a href="https://wa.me/12026041610">+1 202 604 1610</a></li>
+          <li>Call: <a href="tel:+233500694540">+233 500 694 540</a> / <a href="tel:+233271000049">+233 271 000 049</a></li>
           <li><a href="contact.html">Map & Form</a></li>
           <li>Social: 
             <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
@@ -411,6 +477,9 @@
     <div class="container" style="margin-top:20px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
       <p>© 2026 China Hub Express. All rights reserved.</p>
       <p>Designed by <a href="https://miracleaneke.online" target="_blank" rel="noopener">Miracle Aneke</a></p>
+    </div>
+    <div class="container" style="margin-top:12px;font-size:0.9rem;border-top:1px solid #2a3f60;padding-top:12px;color:#b0c6dd;">
+      <p><strong>Disclaimer:</strong> China Hub Express is a professional service provider with a strong track record of successful visa applications, business registrations, and trade facilitation. While we strive for excellence and utilize our expertise to maximize your chances of success, individual results may vary based on factors beyond our control, including government policies and third-party decisions. Our services are delivered with the utmost care, and we stand by the quality of our work. For complete terms, please refer to our <a href="terms-and-conditions.html" style="color:#ffcc00;">Terms and Conditions</a>.</p>
     </div>
   </footer>
 
