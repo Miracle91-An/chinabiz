@@ -1,4 +1,3 @@
-<!-- about.html (enhanced) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="About China Hub Express – your trusted partner for China business, visa, travel, and trade.">
   <title>About | China Hub Express</title>
-  <!-- Font Awesome for icons (optional, but nice) -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
-  <!-- STRUCTURED DATA (same as index) -->
+  <!-- STRUCTURED DATA (updated with both Miracle's websites) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -24,23 +23,27 @@
         "founder": [
           {
             "@type": "Person",
-            "name": "Miracle Aneke",
+            "name": "Herbert Hawkson",
             "jobTitle": "Founder & CEO",
-            "nationality": "Ghanaian-Nigerian",
-            "worksFor": {
-              "@type": "Organization",
-              "name": "Four Smart Brothers Ltd and Magnus Miralex Global Ltd"
-            }
-          },
-          {
-            "@type": "Person",
-            "name": "Herbert Hawkson Nyannor",
-            "jobTitle": "Chief Executive Officer",
             "worksFor": {
               "@type": "Organization",
               "name": "Americare Health LLC",
               "url": "https://americarehealthllc.com"
             }
+          },
+          {
+            "@type": "Person",
+            "name": "Miracle Aneke",
+            "jobTitle": "Co-founder & Lead Technologist",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Miracle Aneke",
+              "url": "https://miracleaneke.online"
+            },
+            "sameAs": [
+              "https://miracleaneke.online",
+              "https://miracleaneke.link"
+            ]
           }
         ],
         "areaServed": [
@@ -50,6 +53,7 @@
         ],
         "sameAs": [
           "https://miracleaneke.link",
+          "https://miracleaneke.online",
           "https://americarehealthllc.com"
         ]
       },
@@ -81,6 +85,11 @@
       padding: 30px;
       margin: 40px 0;
       flex-wrap: wrap;
+      transition: var(--transition);
+    }
+    .founder-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
     }
     .founder-img {
       width: 220px;
@@ -103,6 +112,7 @@
       color: var(--primary);
       font-weight: 600;
       margin-bottom: 10px;
+      font-size: 1.1rem;
     }
     .btn-outline-sm {
       padding: 6px 16px;
@@ -113,13 +123,22 @@
       display: inline-block;
       margin-top: 10px;
       transition: var(--transition);
+      background: transparent;
+      margin-right: 8px;
     }
     .btn-outline-sm:hover {
       background: var(--secondary);
       color: #fff;
+      text-decoration: none;
+    }
+    .link-group {
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
-    /* Team gallery item with overlay */
+    /* Team gallery item with overlay (unchanged) */
     .team-gallery-item {
       min-width: 200px;
       width: 200px;
@@ -150,8 +169,17 @@
       font-size: 0.85rem;
       opacity: 0.9;
     }
+    .team-info .link-icons {
+      margin-top: 5px;
+      font-size: 0.8rem;
+    }
+    .team-info .link-icons a {
+      color: var(--accent);
+      margin: 0 3px;
+      text-decoration: none;
+    }
 
-    /* Office & partner gallery items (no overlay, just image) */
+    /* Office & partner gallery items */
     .office-gallery-item, .partner-gallery-item {
       min-width: 280px;
       height: 180px;
@@ -165,7 +193,6 @@
       object-fit: cover;
     }
 
-    /* Why choose us icons */
     .usp-icon {
       font-size: 2rem;
       color: var(--primary);
@@ -194,6 +221,23 @@
       background: var(--accent);
       color: #000;
       font-weight: 700;
+    }
+
+    /* Two-column layout for founder & co-founder */
+    .founders-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin: 30px 0;
+    }
+    .founders-row .founder-card {
+      flex: 1;
+      margin: 0;
+    }
+    @media (max-width: 900px) {
+      .founders-row {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
@@ -244,7 +288,7 @@
       <!-- Our Story (Origin) -->
       <section style="margin: 60px 0; background: var(--muted); padding: 30px; border-radius: var(--radius);">
         <h2 class="section-title">Our Story</h2>
-        <p>Founded by <strong>Herbert Hawkson Nyannor</strong>, China Hub Express was born from years of experience in international trade and healthcare. After successfully establishing Americare Health LLC in the US, Herbert saw the immense potential in connecting African and Western businesses with Chinese suppliers, manufacturers, and educational institutions. What started as a one‑man consulting effort quickly grew into a full‑service agency with a passionate team. Today, we’ve helped hundreds of clients – from first‑time travelers to multinational companies – achieve their goals in China.</p>
+        <p>Founded by <strong>Herbert Hawkson Nyannor</strong> and <strong>Miracle Aneke</strong>, China Hub Express was born from years of experience in international trade, technology, and cross‑cultural business. Herbert, a serial entrepreneur with successful ventures in healthcare, saw the immense potential in connecting African and Western businesses with Chinese suppliers. Miracle, a visionary computer engineer and digital strategist, brought the technical edge and operational precision to turn this vision into a seamless, modern agency. Today, we’ve helped hundreds of clients – from first‑time travelers to multinational companies – achieve their goals in China.</p>
       </section>
 
       <!-- Mission, Vision, Core Values, USP -->
@@ -267,7 +311,7 @@
         <div class="card">
           <i class="fas fa-gem usp-icon"></i>
           <h3>What Makes Us Different</h3>
-          <p>We combine local Chinese knowledge with international business standards. Our team is on the ground in both China and Ghana, ensuring you get accurate, up‑to‑date information and hands‑on support.</p>
+          <p>We combine local Chinese knowledge with international business standards and cutting‑edge digital infrastructure. Our team is on the ground in both China and Ghana, ensuring accurate, up‑to‑date information.</p>
         </div>
       </div>
 
@@ -286,34 +330,62 @@
         </div>
       </section>
 
-      <!-- Founder Section -->
-      <section class="founder-card">
-        <img class="founder-img" src="herbert-hawkson-nyannor.jpeg" alt="Herbert Hawkson Nyannor, Founder">
-        <div class="founder-info">
-          <h3>Herbert Hawkson Nyannor</h3>
-          <div class="founder-title">Founder & CEO, China Hub Express</div>
-          <p>Herbert is a serial entrepreneur with a passion for bridging markets. Besides China Hub Express, he is the founder of <a href="https://americarehealthllc.com" target="_blank" rel="noopener">Americare Health LLC</a>, a US‑based healthcare company. His extensive experience in international business and cross‑cultural negotiation drives our client‑first approach.</p>
-          <a href="https://americarehealthllc.com" target="_blank" class="btn-outline-sm"><i class="fas fa-external-link-alt"></i> Americare Health LLC</a>
+      <!-- FOUNDER & CO-FOUNDER SECTION: enhanced with both Miracle's websites -->
+      <div class="founders-row">
+        <!-- Founder: Herbert Hawkson Nyannor -->
+        <div class="founder-card">
+          <img class="founder-img" src="herbert-hawkson-nyannor.jpeg" alt="Herbert Hawkson Nyannor, Founder" onerror="this.src='https://placehold.co/220x220?text=Herbert+Hawkson'">
+          <div class="founder-info">
+            <h3>Herbert Hawksonr</h3>
+            <div class="founder-title">Founder & CEO, China Hub Express</div>
+            <p>Herbert is a serial entrepreneur with a passion for bridging markets. Besides China Hub Express, he is the founder of <a href="https://americarehealthllc.com" target="_blank" rel="noopener">Americare Health LLC</a>, a US‑based healthcare company. His extensive experience in international business, trade negotiations, and cross‑cultural strategy drives our client‑first approach. Herbert's leadership ensures that every client receives hands‑on, results‑driven support.</p>
+            <a href="https://americarehealthllc.com" target="_blank" class="btn-outline-sm"><i class="fas fa-external-link-alt"></i> Americare Health LLC</a>
+          </div>
         </div>
-      </section>
 
-      <!-- Team Leaders Gallery (fast gliding) -->
+        <!-- Co-founder: Miracle Aneke (enhanced with both .online and .link) -->
+        <div class="founder-card">
+          <img class="founder-img" src="miracle-aneke-headshot.jpeg" alt="Miracle Aneke, Co-founder" onerror="this.src='https://placehold.co/220x220?text=Miracle+Aneke'">
+          <div class="founder-info">
+            <h3>Miracle Aneke</h3>
+            <div class="founder-title">Co‑founder & Lead Technologist</div>
+            <p>Miracle is a dynamic computer engineer, Educator and entrepreneur. As the visionary behind <strong>miracleaneke.online</strong> and <strong>miracleaneke.link</strong>, he builds robust digital ecosystems that power modern businesses. At China Hub Express, Miracle combines his technical expertise with a deep understanding of cross‑border operations — from building secure client portals to streamlining visa logistics. His passion for innovation and user‑centric design ensures that our services are not only efficient but also effortlessly accessible. Miracle’s global perspective (Ghanaian‑Nigerian) and his experience in international collaborations make him an invaluable bridge between clients and the Chinese market.</p>
+            <div class="link-group">
+              <a href="https://miracleaneke.online" target="_blank" class="btn-outline-sm"><i class="fas fa-globe"></i> miracleaneke.online</a>
+              <a href="https://miracleaneke.link" target="_blank" class="btn-outline-sm"><i class="fas fa-link"></i> miracleaneke.link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Leaders Gallery (fast gliding) with both Miracle's links in overlay -->
       <section style="margin: 60px 0;">
         <h2 class="section-title">Meet Our Leadership Team</h2>
         <div class="gallery-track">
           <div class="gallery-inner">
-            <!-- Miracle Aneke -->
+            <!-- Herbert -->
             <div class="team-gallery-item">
-              <img src="miracle-aneke-headshot.jpeg" alt="Miracle Aneke">
+              <img src="herbert-hawkson-nyannor.jpeg" alt="Herbert Hawkson Nyannor" onerror="this.src='https://placehold.co/200x220?text=Herbert'">
+              <div class="team-info">
+                <strong>Herbert Hawkson</strong>
+                <span>Founder & CEO</span>
+              </div>
+            </div>
+            <!-- Miracle Aneke (with both website links) -->
+            <div class="team-gallery-item">
+              <img src="miracle-aneke-headshot.jpeg" alt="Miracle Aneke" onerror="this.src='https://placehold.co/200x220?text=Miracle'">
               <div class="team-info">
                 <strong>Miracle Aneke</strong>
-                <span>Co‑founder & Computer Engineer</span>
-                <a href="https://miracleaneke.online" target="_blank" style="color: var(--accent);">🌐</a>
+                <span>Co‑founder & Lead Technologist</span>
+                <div class="link-icons">
+                  <a href="https://miracleaneke.online" target="_blank" title="miracleaneke.online"><i class="fas fa-globe"></i></a>
+                  <a href="https://miracleaneke.link" target="_blank" title="miracleaneke.link"><i class="fas fa-link"></i></a>
+                </div>
               </div>
             </div>
             <!-- Mark Nyannor -->
             <div class="team-gallery-item">
-              <img src="mark-nyannor.jpeg" alt="Mark Nyannor">
+              <img src="mark-nyannor.jpeg" alt="Mark Nyannor" onerror="this.src='https://placehold.co/200x220?text=Mark'">
               <div class="team-info">
                 <strong>Mark Nyannor</strong>
                 <span>Administrator</span>
@@ -321,7 +393,7 @@
             </div>
             <!-- David Nyannor -->
             <div class="team-gallery-item">
-              <img src="david-nyannor.jpeg" alt="David Nyannor">
+              <img src="david-nyannor.jpeg" alt="David Nyannor" onerror="this.src='https://placehold.co/200x220?text=David'">
               <div class="team-info">
                 <strong>David Nyannor</strong>
                 <span>Operations Manager</span>
@@ -329,43 +401,47 @@
             </div>
             <!-- Praise Aneke -->
             <div class="team-gallery-item">
-              <img src="praise-aneke.jpeg" alt="Praise Aneke">
+              <img src="praise-aneke.jpeg" alt="Praise Aneke" onerror="this.src='https://placehold.co/200x220?text=Praise'">
               <div class="team-info">
                 <strong>Praise Aneke</strong>
                 <span>Operational Manager</span>
               </div>
             </div>
-            <!-- Duplicate for seamless loop (can be the same images) -->
+            <!-- Duplicates for seamless loop -->
+            <div class="team-gallery-item">
+              <img src="herbert-hawkson.jpeg" alt="Herbert Hawkson ">
+              <div class="team-info">
+                <strong>Herbert Hawkson</strong>
+                <span>Founder & CEO</span>
+              </div>
+            </div>
             <div class="team-gallery-item">
               <img src="miracle-aneke-headshot.jpeg" alt="Miracle Aneke">
               <div class="team-info">
                 <strong>Miracle Aneke</strong>
-                <span>Co‑founder & Computer Engineer</span>
-              </div>
-            </div>
-            <div class="team-gallery-item">
-              <img src="mark-nyannor.jpeg" alt="Mark Nyannor">
-              <div class="team-info">
-                <strong>Mark Nyannor</strong>
-                <span>Administrator</span>
+                <span>Co‑founder & Lead Technologist</span>
+                <div class="link-icons">
+                  <a href="https://miracleaneke.online" target="_blank"><i class="fas fa-globe"></i></a>
+                  <a href="https://miracleaneke.link" target="_blank"><i class="fas fa-link"></i></a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Office Photos Gallery -->
+      <!-- Office Photos Gallery (unchanged) -->
       <section style="margin: 60px 0;">
         <h2 class="section-title">Our Office</h2>
         <div class="gallery-track">
           <div class="gallery-inner">
-            <div class="office-gallery-item"><img src="chinahubexpressbuilding1.jpeg" alt="Office Building"></div>
-            <div class="office-gallery-item"><img src="chinahubexpressbuilding2.jpeg" alt="Office Building"></div>
-            <div class="office-gallery-item"><img src="images/office3.jpg" alt="Meeting room"></div>
-            <div class="office-gallery-item"><img src="images/office4.jpg" alt="Team workspace"></div>
+            <div class="office-gallery-item"><img src="chinahubexpressbuilding1.jpeg" alt="Office Building" onerror="this.src='https://placehold.co/280x180?text=Office+View'"></div>
+            <div class="office-gallery-item"><img src="chinahubexpressbuilding2.jpeg" alt="Office Building" onerror="this.src='https://placehold.co/280x180?text=Office+Front'"></div>
+            <div class="office-gallery-item"><img src="images/office3.jpg" alt="Meeting room" onerror="this.src='https://placehold.co/280x180?text=Meeting+Room'"></div>
+            <div class="office-gallery-item"><img src="images/office4.jpg" alt="Team workspace" onerror="this.src='https://placehold.co/280x180?text=Workspace'"></div>
             <!-- Duplicates for seamless loop -->
-            <div class="office-gallery-item"><img src="images/office1.jpg" alt="Office front"></div>
-            <div class="office-gallery-item"><img src="images/office2.jpg" alt="Reception"></div>
+            <div class="office-gallery-item"><img src="images/office1.jpg" alt="Office front" onerror="this.src='https://placehold.co/280x180?text=Office+Exterior'"></div>
+            <div class="office-gallery-item"><img src="images/office2.jpg" alt="Reception" onerror="this.src='https://placehold.co/280x180?text=Reception'"></div>
           </div>
         </div>
       </section>
@@ -375,14 +451,14 @@
         <h2 class="section-title">Our Trusted Partners</h2>
         <div class="gallery-track">
           <div class="gallery-inner">
-            <div class="partner-gallery-item"><img src="https://miracleaneke.online/#fourb.jpg" alt="Partner 1"></div>
-            <div class="partner-gallery-item"><img src="magnuslogo.png" alt="Partner 2"></div>
-            <div class="partner-gallery-item"><img src="americarehealthllclogo.jpeg" alt="Partner 3"></div>
-            <div class="partner-gallery-item"><img src="ota.jpeg" alt="Partner 4"></div>
-            <div class="partner-gallery-item"><img src="images/partner-logo5.png" alt="Partner 5"></div>
-            <!-- Duplicates -->
-            <div class="partner-gallery-item"><img src="images/partner-logo1.png" alt="Partner 1"></div>
-            <div class="partner-gallery-item"><img src="images/partner-logo2.png" alt="Partner 2"></div>
+            <div class="partner-gallery-item"><img src="images/partner-fourb.png" alt="Four Smart Brothers Ltd" onerror="this.src='https://placehold.co/280x180?text=Four+Smart+Brothers'"></div>
+            <div class="partner-gallery-item"><img src="magnuslogo.png" alt="Magnus Miralex Global" onerror="this.src='https://placehold.co/280x180?text=Magnus+Miralex'"></div>
+            <div class="partner-gallery-item"><img src="americarehealthllclogo.jpeg" alt="Americare Health LLC" onerror="this.src='https://placehold.co/280x180?text=Americare+Health'"></div>
+            <div class="partner-gallery-item"><img src="ota.jpeg" alt="OTA Logistics" onerror="this.src='https://placehold.co/280x180?text=OTA+Logistics'"></div>
+            <div class="partner-gallery-item"><img src="images/partner-logo5.png" alt="China Business Network" onerror="this.src='https://placehold.co/280x180?text=China+Network'"></div>
+            <!-- duplicates -->
+            <div class="partner-gallery-item"><img src="images/partner-logo1.png" alt="Partner Alliance"></div>
+            <div class="partner-gallery-item"><img src="images/partner-logo2.png" alt="Global Trade Hub"></div>
           </div>
         </div>
       </section>
@@ -476,7 +552,7 @@
     </div>
     <div class="container" style="margin-top:20px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
       <p>© 2026 China Hub Express. All rights reserved.</p>
-      <p>Designed by <a href="https://miracleaneke.online" target="_blank" rel="noopener">Miracle Aneke</a></p>
+      <p>Designed by <a href="https://miracleaneke.online" target="_blank" rel="noopener">Miracle Aneke</a> | <a href="https://miracleaneke.link" target="_blank" rel="noopener">miracleaneke.link</a></p>
     </div>
     <div class="container" style="margin-top:12px;font-size:0.9rem;border-top:1px solid #2a3f60;padding-top:12px;color:#b0c6dd;">
       <p><strong>Disclaimer:</strong> China Hub Express is a professional service provider with a strong track record of successful visa applications, business registrations, and trade facilitation. While we strive for excellence and utilize our expertise to maximize your chances of success, individual results may vary based on factors beyond our control, including government policies and third-party decisions. Our services are delivered with the utmost care, and we stand by the quality of our work. For complete terms, please refer to our <a href="terms-and-conditions.html" style="color:#ffcc00;">Terms and Conditions</a>.</p>
@@ -489,5 +565,17 @@
   </a>
 
   <script src="script.js"></script>
+  <script>
+    (function() {
+      const imgs = document.querySelectorAll('img');
+      imgs.forEach(img => {
+        img.onerror = function() {
+          if (!this.src.includes('placehold.co')) {
+            this.src = 'https://placehold.co/280x180?text=Image+Unavailable';
+          }
+        };
+      });
+    })();
+  </script>
 </body>
 </html>
